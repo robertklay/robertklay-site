@@ -2,128 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robert Klay | Director</title>
   <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      font-family: "Helvetica Neue", sans-serif;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-    }
-    nav a:hover {
-      background: #fff;
-      color: #000;
-      border-radius: 5px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .gallery-item {
-      background: #111;
-      padding: 1rem;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-    }
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      border-radius: 10px;
-    }
-    .gallery-item p {
-      margin: 0.5rem 0 0;
-      font-size: 1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #111;
-      font-size: 0.9rem;
-    }
-    .contact {
-      padding: 2rem;
-      text-align: center;
-    }
-    .contact a {
-      color: orange;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
+    body { background: #000; color: #fff; font-family: sans-serif; margin: 0; }
+    header img { width: 100%; max-height: 400px; object-fit: cover; }
+    nav { text-align: center; padding: 1rem; background: #111; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; padding: 2rem; }
+    .gallery-item { width: 300px; text-align: center; background: #111; border-radius: 8px; padding: 1rem; }
+    .gallery-item iframe { width: 100%; height: 200px; border-radius: 8px; }
+    footer { text-align: center; padding: 2rem; background: #111; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Robert Klay</h1>
-    <p>Director y Editor de Videoclips y Comerciales</p>
-  </header>
 
-  <nav>
-    <a href="#videoclips">Videoclips</a>
-    <a href="#comerciales">Comerciales</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<header>
+  <img src="banner.jpg" alt="Banner Principal" />
+  <h1 style="text-align:center;">Robert Klay</h1>
+</header>
 
-  <section id="videoclips">
-    <h2 style="text-align:center;">Videoclips</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="gifs/videoclip1.gif" alt="Videoclip 1">
-        <p>Videoclip 1</p>
-      </div>
-      <div class="gallery-item">
-        <img src="gifs/videoclip2.gif" alt="Videoclip 2">
-        <p>Videoclip 2</p>
-      </div>
+<nav>
+  <a href="#videoclips">Videoclips</a>
+  <a href="#comerciales">Comerciales</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="videoclips">
+  <h2 style="text-align:center;">Videoclips</h2>
+  <div class="gallery">
+    <!-- Substitua o ID do YouTube abaixo -->
+    <div class="gallery-item">
+      <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO1" frameborder="0" allowfullscreen></iframe>
+      <p>Nome do vídeo</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="comerciales">
-    <h2 style="text-align:center;">Comerciales</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="gifs/comercial1.gif" alt="Comercial 1">
-        <p>Comercial 1</p>
-      </div>
-      <div class="gallery-item">
-        <img src="gifs/comercial2.gif" alt="Comercial 2">
-        <p>Comercial 2</p>
-      </div>
+<section id="comerciales">
+  <h2 style="text-align:center;">Comerciales</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO2" frameborder="0" allowfullscreen></iframe>
+      <p>Nome do comercial</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contacto" class="contact">
-    <h2>Contacto</h2>
-    <p>¿Quieres colaborar?</p>
-    <a href="https://wa.me/34664274151" target="_blank">Escríbeme: 664274151</a>
-  </section>
+<section id="contacto" style="text-align:center; padding:2rem;">
+  <h2>Contacto</h2>
+  <p>Escríbeme por WhatsApp:</p>
+  <a href="https://wa.me/34664274151" style="color: orange; font-size: 1.2rem;">+34 664 274 151</a>
+</section>
 
-  <footer>
-    &copy; 2025 Robert Klay | Zaragoza, España
-  </footer>
+<footer>
+  &copy; 2025 Robert Klay — Zaragoza, España
+</footer>
+
 </body>
 </html>
