@@ -3,70 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robert Klay | Video & Motion</title>
+  <title>Portafolio | Robert Klay</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #111; color: #f5f5f5; }
-    header { background: #000; padding: 1em 2em; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { margin: 0; font-size: 1.5em; }
-    nav a { color: #f5f5f5; margin-left: 1em; text-decoration: none; font-weight: bold; }
-    section { padding: 3em 2em; max-width: 960px; margin: auto; }
-    .hero { text-align: center; }
-    .hero h2 { font-size: 2.5em; margin-bottom: 0.5em; }
-    .hero p { font-size: 1.2em; }
-    .btn { display: inline-block; margin-top: 1em; background: orange; color: #000; padding: 0.75em 1.5em; text-decoration: none; border-radius: 5px; font-weight: bold; }
-    .services, .portfolio, .contact { margin-top: 4em; }
-    .service-item { margin-bottom: 1em; }
-    iframe { width: 100%; max-width: 560px; height: 315px; margin-bottom: 1.5em; border: none; }
-    .contact a { color: orange; text-decoration: none; font-weight: bold; }
-    footer { text-align: center; padding: 2em; background: #000; font-size: 0.9em; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #111; color: #f5f5f5; }
+    header { background: #000; padding: 1em 2em; text-align: center; }
+    header h1 { margin: 0; font-size: 2em; }
+    nav { display: flex; justify-content: center; background: #222; }
+    nav button { background: none; border: none; color: #f5f5f5; padding: 1em; font-size: 1em; cursor: pointer; }
+    nav button.active { border-bottom: 3px solid orange; font-weight: bold; }
+    section { display: none; padding: 2em; max-width: 1000px; margin: auto; }
+    section.active { display: block; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1em; }
+    .item { background: #222; padding: 1em; border-radius: 8px; text-align: center; }
+    .item img { width: 100%; border-radius: 8px; }
+    footer { text-align: center; padding: 2em; background: #000; font-size: 0.9em; margin-top: 2em; }
+    a.contacto { display: inline-block; margin-top: 1em; color: orange; font-weight: bold; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Robert Klay</h1>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <h1>Galería de Trabajos</h1>
+    <p>Videoclips y Comerciales | Contacto: <a class="contacto" href="https://wa.me/34664274151" target="_blank">664274151</a></p>
   </header>
 
-  <section class="hero">
-    <h2>Videomaker & Motion Designer en Zaragoza</h2>
-    <p>Producción de videoclips, animaciones, anuncios y videos creativos para marcas y artistas.</p>
-    <a class="btn" href="#portafolio">Ver portafolio</a>
+  <nav>
+    <button onclick="mostrar('videoclips')" id="btn-videoclips" class="active">Videoclips</button>
+    <button onclick="mostrar('comerciales')" id="btn-comerciales">Comerciales</button>
+  </nav>
+
+  <section id="videoclips" class="active">
+    <div class="grid">
+      <div class="item">
+        <img src="gifs/videoclip1.gif" alt="Videoclip 1">
+        <p>Videoclip 1</p>
+      </div>
+      <div class="item">
+        <img src="gifs/videoclip2.gif" alt="Videoclip 2">
+        <p>Videoclip 2</p>
+      </div>
+    </div>
   </section>
 
-  <section id="sobre">
-    <h2>Sobre mí</h2>
-    <p>Soy Robert Klay, brasileño, editor y motion designer con más de 7 años de experiencia en producción audiovisual. Actualmente resido en Zaragoza, ofreciendo soluciones visuales para empresas, artistas y emprendedores.</p>
-  </section>
-
-  <section id="servicios" class="services">
-    <h2>Servicios</h2>
-    <div class="service-item">🎬 Producción de videoclips y visuales creativos</div>
-    <div class="service-item">📱 Videos animados para redes sociales y marketing</div>
-    <div class="service-item">🛍️ Videos de productos y comerciales</div>
-    <div class="service-item">🎨 Animación cartelada y motion graphics</div>
-  </section>
-
-  <section id="portafolio" class="portfolio">
-    <h2>Portafolio</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-    <p>Más trabajos disponibles en Instagram: <a href="https://instagram.com/ikon.motion" target="_blank">@ikon.motion</a></p>
-  </section>
-
-  <section id="contacto" class="contact">
-    <h2>Contacto</h2>
-    <p>¿Tienes un proyecto en mente? Escríbeme directamente:</p>
-    <p>📱 <a href="https://wa.me/34664274151" target="_blank">Enviar mensaje por WhatsApp</a></p>
-    <p>📸 <a href="https://instagram.com/ikon.motion" target="_blank">@ikon.motion</a></p>
+  <section id="comerciales">
+    <div class="grid">
+      <div class="item">
+        <img src="gifs/comercial1.gif" alt="Comercial 1">
+        <p>Comercial 1</p>
+      </div>
+      <div class="item">
+        <img src="gifs/comercial2.gif" alt="Comercial 2">
+        <p>Comercial 2</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Robert Klay | Zaragoza, España
+    &copy; 2025 Robert Klay – Zaragoza, España
   </footer>
+
+  <script>
+    function mostrar(tab) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+      document.getElementById(tab).classList.add('active');
+      document.getElementById('btn-' + tab).classList.add('active');
+    }
+  </script>
 </body>
 </html>
